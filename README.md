@@ -1,19 +1,30 @@
 # nupic.core-redux
 Nupic.Core C++ Extraction Redux.
 
-### Setup (CMake)
+## Quick Start
 
-path/to/repo/src  
-path/to/repo/build
+### Windows
+
+#### Setup
+
+* [CMake](https://cmake.org/download/)
+* [VCPKG](https://github.com/Microsoft/vcpkg#quick-start)
+* [CapnProto](https://capnproto.org/install.html)
+
+#### Install
+
+* Run `vcpkg install boost`.
+* Build this CapnProto `INSTALL` project.  
+
+#### CMake
+* Configure
+  * Specify the generator for this project: __Visual Studio 15 2017__
+  * Specify toolchain file for cross-compiling: __~\vcpkg\scripts\buildsystems\vcpkg.cmake__
+* Generate
 
 ## Considerations
 
-Add find_package?
-
-* Will it be easy to integrate with vcpkg and apt-get?
-* What about packages that aren't available via the package manager?
-
-Flatten the file structure? 
+#### Flatten the file structure? 
 
 * Should internal and external sources be separate?
 * There should probably be a CMakeLists.txt in the root, regardless.
@@ -24,7 +35,7 @@ Flatten the file structure?
   CMakeLists.txt
 ```
 
-A project per existing subfolder?
+#### Project per existing subfolder?
 
 * No redundant, matching filters.
 * More modular.
