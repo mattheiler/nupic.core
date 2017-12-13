@@ -14,7 +14,7 @@ Nupic.Core C++ Extraction Redux.
 #### Install
 
 * Run `vcpkg install boost`.
-* Build this CapnProto `INSTALL` project.  
+* Build the CapnProto `INSTALL` project.  
 
 #### CMake
 * Configure
