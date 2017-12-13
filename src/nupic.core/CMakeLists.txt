@@ -12,6 +12,12 @@ source_group(TREE "${CMAKE_CURRENT_SOURCE_DIR}/bindings" PREFIX ${NUPIC_BINDINGS
 source_group(TREE "${CMAKE_CURRENT_SOURCE_DIR}/include" PREFIX ${NUPIC_INCLUDE_GROUP_PREFIX} FILES ${INCLUDES})
 source_group(TREE "${CMAKE_CURRENT_SOURCE_DIR}/src" PREFIX ${NUPIC_SOURCE_GROUP_PREFIX} FILES ${SOURCES})
 
-# Link against external project "humblelogging"
-target_link_libraries(Nupic.Core ${CapnProto_LIBRARIES})
-add_dependencies(Nupic.Core CapnProto)
+# CapnProto
+find_package(CapnProto REQUIRED)
+include_directories(${CAPNP_INCLUDE_DIRS})
+add_definitions(${CAPNP_DEFINITIONS})
+
+# Boost
+find_package(Boost REQUIRED)
+target_link_libraries(Nupic.Core PRIVATE ${Boost_LIBRARIES})
+target_include_directories(Nupic.Core PRIVATE ${Boost_INCLUDE_DIRS})
