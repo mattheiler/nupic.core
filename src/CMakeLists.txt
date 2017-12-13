@@ -1,18 +1,2 @@
-# CMake
-cmake_minimum_required(VERSION 3.8 FATAL_ERROR)
-
-# Targets
-# TODO Preferences based on generator? ...Overkill?
-SET(NUPIC_PREDEFINED_TARGETS_FOLDER_NAME "CMake Predefined Targets")
-SET(NUPIC_BINDINGS_GROUP_PREFIX "Swig Interface Files")
-SET(NUPIC_INCLUDE_GROUP_PREFIX "Header Files")
-SET(NUPIC_SOURCE_GROUP_PREFIX "Source Files")
-
-# Globals
-SET_PROPERTY(GLOBAL PROPERTY USE_FOLDERS ON)
-SET_PROPERTY(GLOBAL PROPERTY PREDEFINED_TARGETS_FOLDER ${NUPIC_PREDEFINED_TARGETS_FOLDER_NAME})
-
-# Project
-project(Nupic.Core VERSION 0.1 LANGUAGES CXX)
-
+# This is dumb... flatten the file structure.
 add_subdirectory(nupic.core)
