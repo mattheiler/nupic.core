@@ -27,6 +27,7 @@
 
 #include <nupic/utils/LogItem.hpp>
 #include <nupic/types/Exception.hpp>
+
 #include <iostream>  // cerr
 #include <stdexcept> // runtime_error
 

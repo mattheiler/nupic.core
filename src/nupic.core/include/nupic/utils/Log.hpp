@@ -31,7 +31,6 @@
 #include <nupic/utils/LoggingException.hpp>
 #include <nupic/utils/LogItem.hpp>
 
-
 #define NTA_DEBUG nupic::LogItem(__FILE__, __LINE__, nupic::LogItem::debug).stream()
 
 // Can be used in Loggable classes

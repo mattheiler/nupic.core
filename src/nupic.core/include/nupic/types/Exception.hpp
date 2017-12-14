@@ -28,6 +28,7 @@
 #define NTA_EXCEPTION_HPP
 
 #include <nupic/types/Types.hpp>
+
 #include <stdexcept>
 #include <string>
 #include <utility>

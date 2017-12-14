@@ -27,8 +27,9 @@
 #ifndef NTA_TIMER2_HPP
 #define NTA_TIMER2_HPP
 
-#include <string>
 #include <nupic/types/Types.hpp>
+
+#include <string>
 
 namespace nupic
 {

@@ -26,8 +26,10 @@ Environment Implementation
 
 #include <nupic/os/Env.hpp>
 #include <nupic/utils/Log.hpp>
+
 #include <apr_general.h>
 #include <apr_env.h>
+
 #include <cctype> // toupper
 #include <algorithm> // std::transform
 
@@ -71,8 +73,7 @@ void Env::set(const std::string& name, const std::string& value)
   // @todo remove apr initialization when we have global initialization
   apr_status_t status = apr_initialize();
   if (status != APR_SUCCESS) {
-    NTA_THROW << "Env::set -- Unable to initialize APR" << " name = " << name <<
-                                                      " value = " << value;
+    NTA_THROW << "Env::set -- Unable to initialize APR" << " name = " << name << " value = " << value;
     // ok to return. Haven't created a pool yet
     return;
   }
@@ -80,8 +81,7 @@ void Env::set(const std::string& name, const std::string& value)
   apr_pool_t *poolP;
   status = apr_pool_create(&poolP, nullptr);
   if (status != APR_SUCCESS) {
-    NTA_THROW << "Env::set -- Unable to create a pool." << " name = " << name <<
-                                                      " value = " << value;
+    NTA_THROW << "Env::set -- Unable to create a pool." << " name = " << name << " value = " << value;
     // ok to return. Haven't created a pool yet. 
     return;
   }
@@ -129,8 +129,7 @@ char ** Env::environ_ = nullptr;
 #else
   extern char **environ;
 #endif
-
-
+  
 char **Env::getenv()
 {
   if (environ_ != nullptr)
@@ -144,7 +143,6 @@ char **Env::getenv()
 
   return environ_;
 }
-
 
 static std::string _getOptionEnvironmentVariable(const std::string& optionName)
 {

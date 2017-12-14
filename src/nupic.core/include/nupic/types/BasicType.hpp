@@ -24,6 +24,7 @@
 #define NTA_BASIC_TYPE_HPP
 
 #include <nupic/types/Types.h>
+
 #include <string>
 
 namespace nupic

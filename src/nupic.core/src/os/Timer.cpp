@@ -26,6 +26,7 @@
  */
 
 #include <nupic/os/Timer.hpp>
+
 #include <sstream>
 
 // Define a couple of platform-specific helper functions
@@ -33,6 +34,7 @@
 #if defined(NTA_OS_WINDOWS)
 
 #include <windows.h>
+
 static nupic::UInt64 ticksPerSec_ = 0;
 static nupic::UInt64 initialTicks_ = 0;
 

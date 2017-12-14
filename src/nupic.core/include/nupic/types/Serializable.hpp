@@ -31,6 +31,7 @@
 
 #include <capnp/message.h>
 #include <capnp/serialize.h>
+
 #include <kj/std/iostream.h>
 
 namespace nupic {

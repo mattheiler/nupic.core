@@ -23,10 +23,10 @@
 #ifndef NTA_GROUPBY_HPP
 #define NTA_GROUPBY_HPP
 
+#include <nupic/utils/Log.hpp>
+
 #include <tuple>
 #include <algorithm> // is_sorted
-
-#include <nupic/utils/Log.hpp>
 
 namespace nupic
 {

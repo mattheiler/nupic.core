@@ -25,6 +25,7 @@
 
 #include <nupic/os/Regex.hpp>
 #include <nupic/utils/Log.hpp>
+
 #if defined(NTA_OS_WINDOWS)
   // TODO: See https://github.com/numenta/nupic.core/issues/128
   #include <regex>

@@ -27,9 +27,10 @@
 #ifndef NTA_STRING_UTILS_HPP
 #define NTA_STRING_UTILS_HPP
 
-
 #include <nupic/types/Types.hpp>
+
 #include <boost/shared_array.hpp>
+
 #include <string>
 #include <vector>
 #include <set>

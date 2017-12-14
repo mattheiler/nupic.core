@@ -23,10 +23,9 @@
 #ifndef NUPIC_UTIL_MOVING_AVERAGE_HPP
 #define NUPIC_UTIL_MOVING_AVERAGE_HPP
 
-#include <vector>
-
 #include <nupic/types/Types.hpp>
 
+#include <vector>
 
 namespace nupic
 {
