@@ -13,7 +13,11 @@ Nupic.Core C++ Extraction Redux.
 
 #### Install
 
+* Run `vcpkg install apr`.
+* Run `vcpkg install apr-util`.
 * Run `vcpkg install boost`.
+* Run `vcpkg install yaml-cpp`.
+* Run `vcpkg install zlib`.
 * Build the CapnProto `INSTALL` project.  
 
 #### CMake
