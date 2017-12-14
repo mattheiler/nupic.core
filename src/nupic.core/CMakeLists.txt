@@ -12,12 +12,21 @@ source_group(TREE "${CMAKE_CURRENT_SOURCE_DIR}/bindings" PREFIX ${NUPIC_BINDINGS
 source_group(TREE "${CMAKE_CURRENT_SOURCE_DIR}/include" PREFIX ${NUPIC_HEADER_GROUP_PREFIX} FILES ${HEADERS})
 source_group(TREE "${CMAKE_CURRENT_SOURCE_DIR}/src" PREFIX ${NUPIC_SOURCE_GROUP_PREFIX} FILES ${SOURCES})
 
+# Boost
+find_package(Boost REQUIRED)
+target_link_libraries(Nupic.Core PRIVATE ${Boost_LIBRARIES})
+target_include_directories(Nupic.Core PRIVATE ${Boost_INCLUDE_DIRS})
+
 # CapnProto
 find_package(CapnProto REQUIRED)
 include_directories(${CAPNP_INCLUDE_DIRS})
 add_definitions(${CAPNP_DEFINITIONS})
 
-# Boost
-find_package(Boost REQUIRED)
-target_link_libraries(Nupic.Core PRIVATE ${Boost_LIBRARIES})
-target_include_directories(Nupic.Core PRIVATE ${Boost_INCLUDE_DIRS})
+# Yaml
+find_package(yaml-cpp REQUIRED)
+target_link_libraries(Nupic.Core PRIVATE yaml-cpp)
+
+# ZLib
+find_package(ZLib REQUIRED)
+target_link_libraries(Nupic.Core PRIVATE ${ZLib_LIBRARIES})
+target_include_directories(Nupic.Core PRIVATE ${ZLib_INCLUDE_DIRS})
