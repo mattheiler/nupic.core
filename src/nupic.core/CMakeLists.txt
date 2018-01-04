@@ -91,6 +91,10 @@ find_package(ZLib REQUIRED)
 target_link_libraries(Nupic.Core PRIVATE ${ZLib_LIBRARIES})
 target_include_directories(Nupic.Core PRIVATE ${ZLib_INCLUDE_DIRS})
 
-# APR... CAN THIS DEPENDENCY BE REPLACED W/ BOOST?
-find_path(APR_INCLUDE_DIRS NAMES apr.h)
-include_directories(${APR_INCLUDE_DIRS})
+# APR
+find_library(Apr REQUIRED)
+target_link_libraries(Nupic.Core PRIVATE Apr)
+
+# APR Util
+find_library(AprUtil REQUIRED)
+target_link_libraries(Nupic.Core PRIVATE AprUtil)

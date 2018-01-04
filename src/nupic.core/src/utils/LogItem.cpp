@@ -24,7 +24,6 @@
 * LogItem implementation
 */
 
-
 #include <nupic/utils/LogItem.hpp>
 #include <nupic/types/Exception.hpp>
 
