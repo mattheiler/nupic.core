@@ -26,11 +26,6 @@ find_package(Boost REQUIRED)
 target_link_libraries(nupic PRIVATE ${Boost_LIBRARIES})
 target_include_directories(nupic PRIVATE ${Boost_INCLUDE_DIRS})
 
-# CapnProto
-find_package(CapnProto REQUIRED)
-include_directories(${CAPNP_INCLUDE_DIRS})
-add_definitions(${CAPNP_DEFINITIONS})
-
 # Yaml
 find_package(yaml-cpp REQUIRED)
 target_link_libraries(nupic PRIVATE yaml-cpp)
@@ -39,11 +34,3 @@ target_link_libraries(nupic PRIVATE yaml-cpp)
 find_package(ZLib REQUIRED)
 target_link_libraries(nupic PRIVATE ${ZLib_LIBRARIES})
 target_include_directories(nupic PRIVATE ${ZLib_INCLUDE_DIRS})
-
-# APR
-find_library(Apr REQUIRED)
-target_link_libraries(nupic PRIVATE Apr)
-
-# APR Util
-find_library(AprUtil REQUIRED)
-target_link_libraries(nupic PRIVATE AprUtil)
