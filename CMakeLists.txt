@@ -4,10 +4,11 @@ project(nupic VERSION 0.1 LANGUAGES CXX)
 # Preferences
 set(NUPIC_HEADER_GROUP_PREFIX "Header Files")
 set(NUPIC_SOURCE_GROUP_PREFIX "Source Files")
+set(NUPIC_PREDEFINED_TARGETS_FOLDER "CMake Predefined Targets")
 
 # Global Settings
 set_property(GLOBAL PROPERTY USE_FOLDERS ON)
-set_property(GLOBAL PROPERTY PREDEFINED_TARGETS_FOLDER "CMake Predefined Targets")
+set_property(GLOBAL PROPERTY PREDEFINED_TARGETS_FOLDER NUPIC_PREDEFINED_TARGETS_FOLDER)
 
 # Files
 file(GLOB_RECURSE HEADERS "./inc/*" "./inc/**/*")
