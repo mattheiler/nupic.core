@@ -9,7 +9,6 @@ Nupic.Core C++ Extraction Redux.
 
 * [CMake](https://cmake.org/download/)
 * [VCPKG](https://github.com/Microsoft/vcpkg#quick-start)
-* [CapnProto](https://capnproto.org/install.html)
 
 #### Install
 
