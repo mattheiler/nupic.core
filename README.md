@@ -21,6 +21,9 @@ Nupic.Core C++ Extraction Redux.
 * Build the CapnProto `INSTALL` project.  
 
 #### CMake
+
+I used the Windows GUI.
+
 * __CONFIGURE__
   * Specify the generator for this project: __Visual Studio 15 2017__
   * Specify toolchain file for cross-compiling: __~\vcpkg\scripts\buildsystems\vcpkg.cmake__
