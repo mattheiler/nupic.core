@@ -1,0 +1,23 @@
+PROJECT(nupic.core.py)
+
+# Directories
+SET(NUPIC_PY_SOURCE_DIR "${CMAKE_CURRENT_SOURCE_DIR}/src")
+
+# Files
+FILE(GLOB_RECURSE SOURCES "${NUPIC_PY_SOURCE_DIR}/*" "{NUPIC_PY_SOURCE_DIR}/**/*")
+
+# Library
+ADD_LIBRARY(nupic.core.py STATIC ${SOURCES})
+
+# Includes
+TARGET_INCLUDE_DIRECTORIES(nupic.core.py PRIVATE ${NUPIC_HEADER_DIR})
+
+# Filters
+SOURCE_GROUP(TREE ${NUPIC_PY_SOURCE_DIR} PREFIX ${SOURCE_GROUP_PREFIX} FILES ${SOURCES})
+
+# References
+TARGET_LINK_LIBRARIES(nupic.core.py PRIVATE nupic.core)
+
+# PyBind11
+FIND_PACKAGE(pybind11 REQUIRED)
+TARGET_LINK_LIBRARIES(nupic.core.py PRIVATE pybind11::pybind11 pybind11::module pybind11::embed)

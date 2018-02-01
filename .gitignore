@@ -1,4 +1,27 @@
-build
+*.so
+*.pyd
+*.dll
+*.sln
+*.sdf
+*.opensdf
+*.vcxproj
+*.filters
+Win32
+x64
+Release
+Debug
+.vs
+/bin
+/lib
+/docs/.build
+/dist
+/build
+/cmake/
+.cache/
+
+# =========================
+# Generated
+# =========================
 
 CMakeCache.txt
 CMakeFiles
