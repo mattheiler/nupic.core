@@ -11,8 +11,6 @@ namespace nupic
 	{
 		class Cat
 		{
-			string name_;
-
 		public:
 
 			explicit Cat(string name);
@@ -20,6 +18,9 @@ namespace nupic
 			const string& getName() const;
 
 			void setName(const string& name);
+
+		private:
+			string name_;
 		};
 	}
 }
