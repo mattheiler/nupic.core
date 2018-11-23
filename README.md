@@ -14,8 +14,6 @@ Mulit-language C++ example project.
 
 * Run `vcpkg install boost`.
 * Run `vcpkg install pybind11`. 
-* Run `vcpkg install yaml-cpp`.
-* Run `vcpkg install zlib`. 
 
 #### CMake
 
